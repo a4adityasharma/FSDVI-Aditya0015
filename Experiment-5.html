@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimal Registration</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif; display: flex; justify-content: center;
+      align-items: center; margin: 0; background-size: 85%;
+      background-image: url(https://img.freepik.com/free-vector/flat-design-forest-landscape_23-2149155031.jpg);
+    }
+    .container {
+      background-color: rgba(93, 211, 234, 0.61); padding: 20px; border-radius: 5px;
+      width: 100%; max-width: 400px; text-align: center; margin-top: 150px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+    label {
+      display: block; text-align: left; margin-bottom: 10px; font-weight: bold;
+    }
+    input[type="text"], input[type="password"], input[type="email"],
+    select, textarea {
+      width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc;
+      border-radius: 8px; box-sizing: border-box;
+    }
+    .radio-group,.dob-group,.checkbox-group {
+      display: flex; gap: 10px; margin-bottom: 10px;
+    }
+    .submit-btn {
+      border:2px solid rgb(218, 81, 81);border-radius: 20px;background-color: rgb(49, 140, 230);
+      cursor: pointer; padding: 10px; font-size: 16px; color:white; width:40%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Register</h1>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="unknown123@gmail.com"/>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" name="phone" placeholder="+91**********"/>
+        </div>
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="male" />Male</label>
+            <label><input type="radio" name="gender" value="female" />Female</label>
+            <label><input type="radio" name="gender" value="other" />Other</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Date of Birth</label>
+          <div class="dob-group">
+            <select name="dob_month">
+              <option value="">Month</option>
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+            </select>
+            <select name="dob_day">
+              <option value="">Day</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <select name="dob_year">
+              <option value="">Year</option>
+              <option value="2006">2006</option>
+              <option value="2005">2005</option>
+              <option value="2004">2004</option>
+              <option value="2003">2003</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Languages</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" value="english" />English</label>
+            <label><input type="checkbox" value="hindi" />Hindi</label>
+            <label><input type="checkbox" value="Haryanvi" />Haryanvi</label>
+            <label><input type="checkbox" value="Punjabi" />Punjabi</label>
+            <label><input type="checkbox" value="Japanese" />Japanese</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="3"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
